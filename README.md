@@ -47,3 +47,7 @@ Branch: animal-sightings-specs
 - created RSPEC tests for Animal and Sighting values
 - created validations that trigger RSPEC tests
 - Added "status: :unprocessable_entity" to the error renders for post requests, creating a 422 message.
+
+Branch: submit-animal-with-sightings
+- Added accepts_nested_attributes_for to animal model, as well as updated strong params in animal controller
+- tested successfully in postman
