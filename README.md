@@ -42,3 +42,8 @@ Branch: animal-sightings-reports
 - enhanced animal 'show' method to display all associated sightings
 - enhanced sightings 'index' method to accept start_date and end_date params, then display any sightings dated between the two
 - tested changed methods in postman
+
+Branch: animal-sightings-specs
+- created RSPEC tests for Animal and Sighting values
+- created validations that trigger RSPEC tests
+- Added "status: :unprocessable_entity" to the error renders for post requests, creating a 422 message.

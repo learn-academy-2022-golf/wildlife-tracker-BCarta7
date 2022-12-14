@@ -14,7 +14,7 @@ class AnimalsController < ApplicationController
         if animal.valid?
             render json: animal       
         else 
-            render json: animal.errors      
+            render json: animal.errors, status: :unprocessable_entity     
        end
     end
 
@@ -24,7 +24,7 @@ class AnimalsController < ApplicationController
         if animal.valid?
             render json: animal       
         else 
-            render json: animal.errors      
+            render json: animal.errors, status: :unprocessable_entity       
        end
     end
 
