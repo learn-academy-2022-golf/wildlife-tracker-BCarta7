@@ -1,4 +1,5 @@
 class SightingsController < ApplicationController
+
     def index
         sightings = Sighting.where(date: params[:start_date]..params[:end_date])
         render json: sightings
@@ -9,7 +10,7 @@ class SightingsController < ApplicationController
         if sighting.valid?
             render json: sighting       
         else 
-            render json: sighting.errors      
+            render json: sighting.errors, status: :unprocessable_entity     
        end
     end
 
@@ -19,7 +20,7 @@ class SightingsController < ApplicationController
         if sighting.valid?
             render json: sighting       
         else 
-            render json: sighting.errors      
+            render json: sighting.errors, status: :unprocessable_entity       
        end
     end
 
